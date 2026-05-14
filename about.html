@@ -1,0 +1,134 @@
+<!-- Stylish about.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial;
+    background:linear-gradient(to right,#141e30,#243b55);
+    color:white;
+}
+
+/* Navigation */
+
+.nav{
+    background:rgba(0,0,0,0.5);
+    padding:15px;
+    text-align:center;
+    backdrop-filter:blur(5px);
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:cyan;
+    border-bottom:2px solid cyan;
+    padding-bottom:5px;
+}
+
+/* About Card */
+
+.card{
+    width:75%;
+    margin:auto;
+    margin-top:60px;
+    background:rgba(255,255,255,0.1);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0px 0px 15px black;
+    backdrop-filter:blur(10px);
+}
+
+/* Heading */
+
+.card h2{
+    font-size:40px;
+    color:cyan;
+    margin-bottom:25px;
+}
+
+/* Paragraph */
+
+.card p{
+    font-size:22px;
+    line-height:38px;
+    color:#f1f1f1;
+}
+
+/* Skills */
+
+.skills{
+    margin-top:30px;
+}
+
+.skills span{
+    display:inline-block;
+    background:cyan;
+    color:black;
+    padding:10px 18px;
+    margin:10px;
+    border-radius:25px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.skills span:hover{
+    transform:scale(1.1);
+    background:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="card">
+
+    <h2>About Me</h2>
+
+    <p>
+        Hello! I am <b>Aayan Mulla</b>, a Computer Engineering student
+        and passionate Web Developer.
+        I enjoy creating modern websites and applications.
+        I also work with Java, PHP and Android Development.
+    </p>
+
+    <div class="skills">
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Java</span>
+        <span>PHP</span>
+        <span>Android</span>
+
+    </div>
+
+</div>
+
+</body>
+</html>
