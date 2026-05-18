@@ -1,9 +1,7 @@
-<!-- Stylish index.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Portfolio Home</title>
+<title>Aayan Mulla Portfolio</title>
 
 <style>
 
@@ -14,109 +12,223 @@
 }
 
 body{
-    font-family:Arial;
-    background:linear-gradient(to right,#141e30,#243b55);
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     color:white;
+    display:flex;
+    overflow-x:hidden;
 }
 
-/* Header */
+/* Sidebar */
 
-.header{
+.nav{
+    width:270px;
+    height:100vh;
+    background:rgba(0,0,0,0.75);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    left:0;
+    top:0;
+    padding-top:30px;
+    box-shadow:5px 0px 20px rgba(0,0,0,0.5);
+}
+
+/* Profile Section */
+
+.profile-box{
     text-align:center;
-    padding:40px;
+    padding:20px;
 }
 
 .profile{
-    width:170px;
-    height:170px;
+    width:190px;
+    height:190px;
     border-radius:50%;
     border:5px solid cyan;
-    box-shadow:0px 0px 20px cyan;
+    box-shadow:0px 0px 30px cyan;
     transition:0.5s;
+    object-fit:cover;
+    object-position:center top;
 }
 
 .profile:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
+    box-shadow:0px 0px 45px cyan;
 }
 
-.header h1{
-    margin-top:15px;
-    font-size:40px;
+.profile-box h1{
+    margin-top:18px;
+    font-size:32px;
 }
 
-.header p{
-    font-size:20px;
-    color:#ddd;
+.profile-box p{
+    margin-top:10px;
+    color:#ccc;
+    font-size:18px;
 }
 
-/* Navigation */
-
-.nav{
-    background:rgba(0,0,0,0.5);
-    padding:15px;
-    text-align:center;
-    backdrop-filter:blur(5px);
-}
+/* Navigation Links */
 
 .nav a{
+    display:block;
     color:white;
     text-decoration:none;
-    margin:20px;
+    padding:18px;
+    margin:12px 20px;
+    border-radius:12px;
     font-size:20px;
     transition:0.3s;
+    text-align:center;
 }
 
 .nav a:hover{
-    color:cyan;
-    border-bottom:2px solid cyan;
-    padding-bottom:5px;
+    background:cyan;
+    color:black;
+    transform:translateX(8px);
+    box-shadow:0px 0px 15px cyan;
 }
 
 /* Main Content */
 
-.container{
-    width:80%;
-    margin:auto;
-    margin-top:40px;
-}
-
-.card{
-    background:rgba(255,255,255,0.1);
+.main{
+    margin-left:270px;
+    width:100%;
     padding:40px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0px 0px 15px black;
+}
+
+/* Hero Section */
+
+.hero{
+    background:rgba(255,255,255,0.08);
+    padding:60px;
+    border-radius:25px;
     backdrop-filter:blur(10px);
+    box-shadow:0px 0px 20px rgba(0,0,0,0.4);
+    text-align:center;
+    animation:fadeIn 1.5s ease;
 }
 
-.card h2{
-    font-size:35px;
-    margin-bottom:20px;
+.hero h2{
+    font-size:50px;
     color:cyan;
+    margin-bottom:20px;
 }
 
-.card p{
-    font-size:20px;
-    line-height:30px;
+.hero p{
+    font-size:22px;
+    line-height:35px;
+    color:#eee;
 }
 
 /* Button */
 
 .btn{
     display:inline-block;
-    margin-top:25px;
-    padding:12px 25px;
+    margin-top:30px;
+    padding:15px 35px;
     background:cyan;
     color:black;
     text-decoration:none;
-    font-size:18px;
-    border-radius:30px;
-    transition:0.3s;
+    font-size:20px;
+    font-weight:bold;
+    border-radius:40px;
+    transition:0.4s;
 }
 
 .btn:hover{
     background:white;
     transform:scale(1.1);
+    box-shadow:0px 0px 20px white;
+}
+
+/* Skills Section */
+
+.skills{
+    margin-top:50px;
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.skill-card{
+    width:280px;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0px 0px 20px cyan;
+}
+
+.skill-card h3{
+    color:cyan;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.skill-card p{
+    font-size:18px;
+    line-height:28px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+@media(max-width:900px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .nav{
+        width:100%;
+        height:auto;
+        position:relative;
+        padding-bottom:20px;
+    }
+
+    .main{
+        margin-left:0;
+        padding:20px;
+    }
+
+    .skills{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero{
+        padding:35px;
+    }
+
+    .hero h2{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:18px;
+        line-height:30px;
+    }
+
 }
 
 </style>
@@ -124,26 +236,35 @@ body{
 
 <body>
 
-<div class="header">
-
-    <!-- Your Photo -->
-    <img src="myphoto.jpeg" class="profile">
-
-    <h1>Aayan Mulla</h1>
-    <p>Web Developer | Programmer | Student</p>
-
-</div>
+<!-- Sidebar -->
 
 <div class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="project.html">Projects</a>
-    <a href="contact.html">Contact</a>
+
+    <div class="profile-box">
+
+        <!-- Your Uploaded Image -->
+        <img src="myphoto.jpg" class="profile">
+
+        <h1>Aayan Mulla</h1>
+
+        <p>Web Developer | Programmer</p>
+
+    </div>
+
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👨 About</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="project.html">💻 Projects</a>
+
 </div>
 
-<div class="container">
+<!-- Main Content -->
 
-    <div class="card">
+<div class="main">
+
+    <!-- Hero Section -->
+
+    <div class="hero">
 
         <h2>Welcome To My Portfolio</h2>
 
@@ -151,12 +272,45 @@ body{
             Hello! I am Aayan Mulla.  
             I am passionate about Web Development,
             Java Programming, Android Development
-            and creating modern websites.
+            and creating modern stylish websites.
         </p>
 
         <a href="project.html" class="btn">
             View Projects
         </a>
+
+    </div>
+
+    <!-- Skills Section -->
+
+    <div class="skills">
+
+        <div class="skill-card">
+            <h3>🌐 Web Development</h3>
+
+            <p>
+                Create modern responsive websites using
+                HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>☕ Java Programming</h3>
+
+            <p>
+                Build Java applications with OOP
+                and advanced programming concepts.
+            </p>
+        </div>
+
+        <div class="skill-card">
+            <h3>📱 Android Development</h3>
+
+            <p>
+                Develop Android applications using
+                Java and Android Studio.
+            </p>
+        </div>
 
     </div>
 
